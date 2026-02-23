@@ -3,7 +3,7 @@ function add_files()
 {
     wp_enqueue_style('reset-style', 'https://unpkg.com/ress@4.0.0/dist/ress.min.css');
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet');
-    wp_enqueue_style('main-style', get_stylesheet_uri());
+    wp_enqueue_style('main-style', get_theme_file_uri('/style.min.css'));
     wp_enqueue_script('main-script', get_theme_file_uri() . '/js/main.min.js', array(), '', true);
 }
 add_action('wp_enqueue_scripts', 'add_files');
@@ -21,7 +21,8 @@ function theme_setup()
 }
 add_action('after_setup_theme', 'theme_setup');
 
-function create_skill_post_type() {
+function create_skill_post_type()
+{
     register_post_type('skill', array(
         'labels' => array(
             'name' => 'Skills',
