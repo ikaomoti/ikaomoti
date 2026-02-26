@@ -3,20 +3,12 @@
 <main>
     <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide slide1">
-                <picture>
-                    <img src="./images/sea.jpg" alt="">
-                </picture>
-            </div>
+            <div class="swiper-slide slide1"></div>
             <div class="swiper-slide slide2">
-                <picture>
-                    <img src="./images/sky.jpg" alt="">
-                </picture>
+                <picture></picture>
             </div>
             <div class="swiper-slide slide3">
-                <picture>
-                    <img src="./images/cosmos.jpg" alt="">
-                </picture>
+                <picture></picture>
             </div>
         </div>
     </div>

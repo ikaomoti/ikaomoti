@@ -19,6 +19,9 @@
 
 @use "object/utility/margin";
 @use "object/utility/text";
+@use "object/utility/js";
+
+
 
 
 
@@ -286,15 +289,15 @@
 
 /*各スライドの背景色の設定*/
 .slide1 {
-    background-image: url(../../images/noon.png);
+    background-image: url(../../assets/images/noon.png);
 }
 
 .slide2 {
-    background-image: url(../../images/evening.png);
+    background-image: url(../../assets/images/evening.png);
 }
 
 .slide3 {
-    background-image: url(../../images/night.png);
+    background-image: url(../../assets/images/night.png);
 }
 
 /* profile
@@ -479,7 +482,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url(../../images/profile.jpg);
+    background-image: url(../../assets/images/profile.jpg);
     opacity: 0.6;
     background-size: cover;
     -webkit-transition: all 1s;
@@ -523,7 +526,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-image: url(../../images/about_top.jpg);
+    background-image: url(../../assets/images/about_top.jpg);
     background-size: cover;
     outline: 10px solid #ddd;
     position: absolute;

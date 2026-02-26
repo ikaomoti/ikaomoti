@@ -4,9 +4,9 @@ $(function () {
         var headerH = $('#header').outerHeight(true);
         var scroll = $(window).scrollTop();
         if (scroll >= headerH) {//headerの高さ以上になったら
-            $('.l-header').addClass('fixed');//fixedというクラス名を付与
+            $('.l-header').addClass('js-header-show');//showというクラス名を付与
         } else {//それ以外は
-            $('.l-header').removeClass('fixed');//fixedというクラス名を除去
+            $('.l-header').removeClass('js-header-show');//showというクラス名を除去
         }
     }
     // 画面をスクロールをしたら動かしたい場合の記述

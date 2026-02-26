@@ -16,7 +16,7 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <header id="header" class="l-header fadein animate__animated">
+    <header id="header" class="l-header">
         <div class="l-container">
             <h1 class="site-title">
                 <a href="<?php echo home_url(''); ?>" class="site-title__link">
