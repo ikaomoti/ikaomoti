@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="wrapper">
+<main class="l-container">
     <h1 class="section-title">Blog</h1>
 
     <?php if (have_posts()) : ?>

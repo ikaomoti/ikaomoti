@@ -3,8 +3,6 @@ html {
   scroll-padding-top: 101px;
 }
 
-/* ページ全体のスタイル
------------------------------------------- */
 html {
   scroll-behavior: smooth;
 }
@@ -41,9 +39,30 @@ li {
   list-style: none;
 }
 
-/* common
+/* header
 ------------------------------------------ */
-.wrapper {
+.l-header {
+  display: none;
+  font-family: "Inconsolata", monospace;
+}
+
+.l-header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.l-container {
   max-width: 1200px;
   width: 100%;
   margin: auto;
@@ -51,18 +70,18 @@ li {
 
 .section-title {
   font-family: "Inconsolata", monospace;
-  font-size: 32px;
+  font-size: 28px;
   text-align: center;
-  margin: 0 auto 40px;
+  margin: 0 auto 10px;
   display: inline-block;
   position: relative;
   color: #000;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (min-width: 600px) {
   .section-title {
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 40px;
   }
 }
 .section-title::after {
@@ -78,18 +97,11 @@ li {
   transform: translateX(-50%);
 }
 
-.font-en {
+.u-font-en {
   font-family: "Inconsolata", monospace;
 }
 
-/* header
------------------------------------------- */
-.header {
-  display: none;
-  font-family: "Inconsolata", monospace;
-}
-
-.header.fixed {
+.l-header.about-header {
   position: fixed;
   top: 0;
   left: 0;
@@ -105,23 +117,7 @@ li {
   background-color: #fff;
 }
 
-.header.about-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  z-index: 100;
-  height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fff;
-}
-
-.header .wrapper {
+.l-header .l-container {
   padding: 0 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,15 +132,15 @@ li {
 }
 
 @media screen and (max-width: 1040px) {
-  .header .site-title {
+  .l-header .site-title {
     font-size: 24px;
   }
 }
-.header .site-title__bar {
+.l-header .site-title__bar {
   margin: 0 15px;
 }
 
-.header .site-title span {
+.l-header .site-title span {
   display: inline-block;
 }
 
@@ -344,17 +340,33 @@ li {
   background-repeat: no-repeat;
 }
 
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
 /*各スライドの背景色の設定*/
 .slide1 {
-  background-image: url(./images/noon.png);
+  background-image: url(../../images/noon.png);
 }
 
 .slide2 {
-  background-image: url(./images/evening.png);
+  background-image: url(../../images/evening.png);
 }
 
 .slide3 {
-  background-image: url(./images/night.png);
+  background-image: url(../../images/night.png);
 }
 
 /* profile
@@ -404,9 +416,7 @@ li {
 .balloon-pop {
   transform: scale(0);
   opacity: 0;
-  transition:
-    transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
-    opacity 0.4s ease;
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
 }
 
 /* 表示状態：ふくらむ */
@@ -533,7 +543,7 @@ li {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-image: url(./images/profile.jpg);
+  background-image: url(../../images/profile.jpg);
   opacity: 0.6;
   background-size: cover;
   -webkit-transition: all 1s;
@@ -577,7 +587,7 @@ li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-image: url(./images/about_top.jpg);
+  background-image: url(../../images/about_top.jpg);
   background-size: cover;
   outline: 10px solid #ddd;
   position: absolute;
@@ -636,19 +646,13 @@ li {
   font-weight: 500;
 }
 
-.profile__container
-  .profile__pictureandtext
-  .profile__text
-  .profile__myname--en {
+.profile__container .profile__pictureandtext .profile__text .profile__myname--en {
   font-size: 24px;
   margin-right: 10px;
 }
 
 @media screen and (max-width: 599px) {
-  .profile__container
-    .profile__pictureandtext
-    .profile__text
-    .profile__myname--en {
+  .profile__container .profile__pictureandtext .profile__text .profile__myname--en {
     font-size: 18px;
   }
 }
@@ -662,11 +666,7 @@ li {
 }
 
 @media screen and (max-width: 1040px) {
-  .profile__container
-    .profile__pictureandtext
-    .profile__text
-    .profile__about
-    br {
+  .profile__container .profile__pictureandtext .profile__text .profile__about br {
     display: block;
   }
 }
@@ -798,20 +798,8 @@ li {
 }
 /* グラデーション背景 */
 .wave-bg {
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(rgb(245, 245, 189)),
-    color-stop(20%, #3af5ca),
-    color-stop(90%, #1b5684)
-  );
-  background: linear-gradient(
-    to top,
-    rgb(245, 245, 189) 0%,
-    #3af5ca 20%,
-    #1b5684 90%
-  );
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(245, 245, 189)), color-stop(20%, #3af5ca), color-stop(90%, #1b5684));
+  background: linear-gradient(to top, rgb(245, 245, 189) 0%, #3af5ca 20%, #1b5684 90%);
   color: #fff;
   /* アニメーション用に背景を大きくする */
   background-size: 100% 200%;
@@ -1467,5 +1455,7 @@ li {
 .contact__picture img {
   width: 100%;
 }
+
+
 
 /*# sourceMappingURL=style.css.map */

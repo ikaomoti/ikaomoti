@@ -1,0 +1,7 @@
+@use "variables" as *;
+
+@mixin tb {
+    @media screen and (min-width: $breakpoint-tb) {
+        @content;
+    }
+}

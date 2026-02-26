@@ -16,8 +16,8 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <header id="header" class="header fadein animate__animated">
-        <div class="wrapper">
+    <header id="header" class="l-header fadein animate__animated">
+        <div class="l-container">
             <h1 class="site-title">
                 <a href="<?php echo home_url(''); ?>" class="site-title__link">
                     <span>ikaomoti</span><span class="site-title__bar"> | </span><span>Web engineer</span>

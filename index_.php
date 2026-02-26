@@ -23,7 +23,7 @@
     <section id="profile" class="profile wrapper">
         <div class="profile__container">
             <a class="profile__catch target-a radialGrad-blue" href="#skills">
-                <p class="profile__catch-text"><span class="font-en">Web</span>コーディング<br>承ります。</p>
+                <p class="profile__catch-text"><span class="u-font-en">Web</span>コーディング<br>承ります。</p>
             </a>
             <div class="profile__pictureandtext">
                 <div class="fly-wrapper">
@@ -31,7 +31,7 @@
                 </div>
                 <div class="fly-wrapper">
                     <a href="<?php echo home_url(); ?>/about/" class="profile__text target-c radialGrad-orange">
-                        <p class="profile__myname"><span class="profile__myname--en font-en">ikaomoti</span>イカオモチ</p>
+                        <p class="profile__myname"><span class="profile__myname--en u-font-en">ikaomoti</span>イカオモチ</p>
                         <p class="profile__about">元時計修理士のウェブエンジニア。</p>
                         <p class="profile__about">趣味はクライミングと犬。</p>
                     </a>
@@ -45,7 +45,7 @@
             <h2 class="section-title">Skills</h2>
             <ul class="skills__contianer">
                 <li class="skill fadeinup animate__animated">
-                    <p class="skill__title font-en">HTML/CSS</p>
+                    <p class="skill__title u-font-en">HTML/CSS</p>
                     <div class="skill__img">
                         <i class="fas fa-code"></i>
                     </div>
@@ -63,7 +63,7 @@
                     </p>
                 </li>
                 <li class="skill fadeinup animate__animated">
-                    <p class="skill__title font-en">JavaScript</p>
+                    <p class="skill__title u-font-en">JavaScript</p>
                     <div class="skill__img">
                         <i class="fab fa-js"></i>
                     </div>
@@ -77,7 +77,7 @@
         <div class="wrapper">
             <h2 class="section-title" id="works">Works</h2>
             <div class="works__container">
-                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                         <article class="post-item">
                             <div class="post-item__wrapper fadeinup animate__animated">
                                 <a href="<? the_permalink(); ?>" class="post-item__title"><?php the_title(); ?></a>
@@ -85,16 +85,16 @@
                                     <?php the_post_thumbnail(); ?>
                                 </a>
                                 <div class="post-info">
-    <?php 
-    $categories = get_the_category();
-    if($categories): ?>
-    <p class="post-meta">公開日：<?php the_time('Y年n月'); ?></p>
-    <?php endif; ?>
-     <p class="post-label">
-            <?php echo esc_html($categories[0]->name); ?>
-        </p>
-    
-</div>
+                                    <?php
+                                    $categories = get_the_category();
+                                    if ($categories): ?>
+                                        <p class="post-meta">公開日：<?php the_time('Y年n月'); ?></p>
+                                    <?php endif; ?>
+                                    <p class="post-label">
+                                        <?php echo esc_html($categories[0]->name); ?>
+                                    </p>
+
+                                </div>
                             </div>
                         </article>
                     <?php endwhile;

@@ -5,27 +5,15 @@
     <!-- MV -->
     <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide slide1">
-                <picture>
-                    <img src="<?php echo get_template_directory_uri(); ?>./images/sea.jpg" alt="">
-                </picture>
-            </div>
-            <div class="swiper-slide slide2">
-                <picture>
-                    <img src="<?php echo get_template_directory_uri(); ?>./images/sky.jpg" alt="">
-                </picture>
-            </div>
-            <div class="swiper-slide slide3">
-                <picture>
-                    <img src="<?php echo get_template_directory_uri(); ?>./images/cosmos.jpg" alt="">
-                </picture>
-            </div>
+            <div class="swiper-slide slide1"></div>
+            <div class="swiper-slide slide2"></div>
+            <div class="swiper-slide slide3"></div>
         </div>
     </div>
 
 
     <!-- Profile -->
-    <section id="profile" class="profile wrapper">
+    <section id="profile" class="profile l-container">
         <div class="profile__container">
             <div class="profile__catch target-a radialGrad-blue balloon-pop">
                 <p class="profile__catch-text lupin-target">Webコーディング承ります。</p>
@@ -36,7 +24,7 @@
                 </div>
                 <div class="fly-wrapper fly-wrapper--text">
                     <a href="<?php echo home_url(); ?>/about/" class="profile__text target-c radialGrad-orange">
-                        <p class="profile__myname lupin-target"><span class="profile__myname--en font-en">ikaomoti</span>イカオモチ</p>
+                        <p class="profile__myname lupin-target"><span class="profile__myname--en u-font-en">ikaomoti</span>イカオモチ</p>
                         <p class="profile__about lupin-target">元時計修理士のウェブエンジニア。</p>
                         <p class="profile__about lupin-target">趣味はクライミングと犬。</p>
                     </a>
@@ -49,7 +37,7 @@
 
         <!-- Skills -->
         <section id="skills" class="skills">
-            <div class="wrapper">
+            <div class="l-container">
                 <h2 class="section-title">Skills</h2>
                 <ul class="skills__container">
 
@@ -69,7 +57,7 @@
                             $text = get_field('description');
                     ?>
                             <li class="skill fadeinup animate__animated">
-                                <p class="skill__title font-en"><?php the_title(); ?></p>
+                                <p class="skill__title u-font-en"><?php the_title(); ?></p>
                                 <div class="skill__img">
                                     <i class="<?php echo $icon; ?>"></i>
                                 </div>
@@ -92,7 +80,7 @@
 
         <!-- Works -->
         <section class="works">
-            <div class="wrapper">
+            <div class="l-container">
                 <h2 class="section-title" id="works">Works</h2>
                 <div class="works__container">
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

@@ -1,4 +1,4 @@
-<footer id="footer" class="footer wrapper">
+<footer id="footer" class="footer l-container">
     <!--
     <nav class="gnav">
         <ul class="gnav__list">
