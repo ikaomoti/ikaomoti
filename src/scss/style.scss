@@ -278,15 +278,15 @@
 
 /*各スライドの背景色の設定*/
 .slide1 {
-    background-image: url(../../assets/images/noon.png);
+    background-image: url(../../dist/images/noon.png);
 }
 
 .slide2 {
-    background-image: url(../../assets/images/evening.png);
+    background-image: url(../../dist/images/evening.png);
 }
 
 .slide3 {
-    background-image: url(../../assets/images/night.png);
+    background-image: url(../../dist/images/night.png);
 }
 
 /* profile
@@ -471,7 +471,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url(../../assets/images/profile.jpg);
+    background-image: url(../../dist/images/profile.jpg);
     opacity: 0.6;
     background-size: cover;
     -webkit-transition: all 1s;
@@ -515,7 +515,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-image: url(../../assets/images/about_top.jpg);
+    background-image: url(../../dist/images/about_top.jpg);
     background-size: cover;
     outline: 10px solid #ddd;
     position: absolute;
@@ -884,7 +884,8 @@
 .skills__container .skill__img .fa-laptop-code,
 .skills__container .skill__img .fa-wordpress,
 .skills__container .skill__img .fa-github,
-.skills__container .skill__img .fa-wand-magic-sparkles {
+.skills__container .skill__img .fa-wand-magic-sparkles,
+.skills__container .skill__img .fa-node-js {
     font-size: 4em;
 }
 

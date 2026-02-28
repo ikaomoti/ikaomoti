@@ -51,7 +51,7 @@ li {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.95);
   opacity: 0;
   position: fixed;
   top: 0;
@@ -350,15 +350,15 @@ li {
 
 /*各スライドの背景色の設定*/
 .slide1 {
-  background-image: url(../../assets/images/noon.png);
+  background-image: url(../../dist/images/noon.png);
 }
 
 .slide2 {
-  background-image: url(../../assets/images/evening.png);
+  background-image: url(../../dist/images/evening.png);
 }
 
 .slide3 {
-  background-image: url(../../assets/images/night.png);
+  background-image: url(../../dist/images/night.png);
 }
 
 /* profile
@@ -535,7 +535,7 @@ li {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-image: url(../../assets/images/profile.jpg);
+  background-image: url(../../dist/images/profile.jpg);
   opacity: 0.6;
   background-size: cover;
   -webkit-transition: all 1s;
@@ -579,7 +579,7 @@ li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-image: url(../../assets/images/about_top.jpg);
+  background-image: url(../../dist/images/about_top.jpg);
   background-size: cover;
   outline: 10px solid #ddd;
   position: absolute;
@@ -910,7 +910,8 @@ li {
 .skills__container .skill__img .fa-laptop-code,
 .skills__container .skill__img .fa-wordpress,
 .skills__container .skill__img .fa-github,
-.skills__container .skill__img .fa-wand-magic-sparkles {
+.skills__container .skill__img .fa-wand-magic-sparkles,
+.skills__container .skill__img .fa-node-js {
   font-size: 4em;
 }
 

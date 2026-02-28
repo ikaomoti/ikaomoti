@@ -1,16 +1,39 @@
 {
     "name": "ikaomoti",
     "version": "1.0.0",
-    "description": "",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "sass": "sass --watch assets/scss/style.scss assets/scss/style.css"
+        "sass": "sass --watch src/scss/style.scss src/scss/style.css"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "autoprefixer": "^10.4.27",
+        "browser-sync": "^3.0.4",
+        "gulp": "^5.0.1",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-imagemin": "^9.2.0",
+        "gulp-postcss": "^10.0.0",
+        "gulp-sass": "^6.0.1",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-terser": "^2.1.0",
         "sass": "^1.97.3"
-    }
+    },
+    "dependencies": {
+        "chokidar": "^4.0.3",
+        "detect-libc": "^2.1.2",
+        "immutable": "^5.1.4",
+        "is-extglob": "^2.1.1",
+        "is-glob": "^4.0.3",
+        "node-addon-api": "^7.1.1",
+        "picomatch": "^4.0.3",
+        "readdirp": "^4.1.2",
+        "source-map-js": "^1.2.1"
+    },
+    "scripts": {
+        "gulp": "gulp"
+    },
+    "description": ""
 }

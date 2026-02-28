@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<header class="header about-header">
-    <div class="wrapper">
+<header class="l-header about-header">
+    <div class="l-container">
         <h1 class="site-title">
             <a href="<?php echo home_url(''); ?>" class="site-title__link"> <?php bloginfo('name'); ?> </a>
         </h1>
@@ -23,7 +23,7 @@
 
 <main>
     <section class="work-single-page wave-bg">
-        <div class="wrapper">
+        <div class="l-container">
             <h2 class="section-title">Works</h2>
             <div class="post__container">
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

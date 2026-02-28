@@ -3,8 +3,8 @@ function add_files()
 {
     wp_enqueue_style('reset-style', 'https://unpkg.com/ress@4.0.0/dist/ress.min.css');
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet');
-    wp_enqueue_style('main-style', get_theme_file_uri('/assets/scss/style.css'));
-    wp_enqueue_script('main-script', get_theme_file_uri() . '/js/main.js', array(), '', true);
+    wp_enqueue_style('main-style', get_theme_file_uri('/dist/css/style.css'));
+    wp_enqueue_script('main-script', get_theme_file_uri() . '/dist/js/main.js', array(), '', true);
 }
 add_action('wp_enqueue_scripts', 'add_files');
 
