@@ -6,7 +6,6 @@ const cleanCSS = require('gulp-clean-css');
 const terser = require('gulp-terser');
 const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
-const responsive = require('gulp-sharp-responsive');
 
 // SCSS → CSS
 function css() {
@@ -36,20 +35,7 @@ function serve() {
 
     gulp.watch('./src/scss/**/*.scss', css);
     gulp.watch('./src/js/**/*.js', js);
-    gulp.watch('./src/images/**/*.{jpg,png}', images);
     gulp.watch('./**/*.php').on('change', browserSync.reload);
 }
 
-//imageをwebp＋minfy化
-function images() {
-    return gulp.src('./src/images/**/*.{jpg,png}')
-        .on('data', file => console.log(file.path))
-        .pipe(responsive({
-            '**/*': [{
-                format: 'webp'
-            }]
-        }))
-        .pipe(gulp.dest('./dist/images'));
-}
-
-exports.default = gulp.series(css, js, images, serve);
+exports.default = gulp.series(css, js, serve);
