@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<header class="l-header about-header">
+<header class="l-header u-header-show">
     <div class="l-container">
         <h1 class="site-title">
             <a href="<?php echo home_url(''); ?>" class="site-title__link">
